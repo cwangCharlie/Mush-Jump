@@ -1,0 +1,80 @@
+module fsm(
+    input CLOCK_50,
+    input startG,
+	 input doneP,
+    output reg  resetn,
+    output reg  drawB,
+	 output reg enableX,
+	 output reg plot,
+    output reg  enableI
+    );
+
+    reg [5:0] current_state, next_state; 
+    
+    localparam  
+    			BEGIN_state        = 5'd0,
+            RESET_state        = 5'd1,
+            DRAW_BACKGROUND    = 5'd2,
+				PRINT_SCREEN       = 5'd3,
+				WAIT_FOR_COMPLETE  = 5'd4,
+				
+				INCREMENT_BACKG	 = 5'd5;
+				
+    
+    // Next state logic aka our state table
+    always@(*)
+    begin: state_table 
+            case (current_state)
+                BEGIN_state: next_state = startG ? RESET_state : BEGIN_state; // Loop in current state until value is input
+                // // Loop in current state until go signal goes low
+                RESET_state: next_state = DRAW_BACKGROUND; // Load the background
+					 DRAW_BACKGROUND: next_state = PRINT_SCREEN;
+					 PRINT_SCREEN: next_state = doneP ? WAIT_FOR_COMPLETE : DRAW_BACKGROUND; // goes for incrmentation
+                WAIT_FOR_COMPLETE: next_state = CLOCK_50 ? INCREMENT_BACKG : WAIT_FOR_COMPLETE;
+					 INCREMENT_BACKG: next_state = DRAW_BACKGROUND;
+            default:     next_state = BEGIN_state;
+        endcase
+    end // state_table
+   
+
+    // Output logic aka all of our datapath control signals
+    always @(*)
+    begin: enable_signals
+        // By default make all our signals 0
+         resetn = 1'b0;
+			drawB = 1'b0;
+			enableX = 1'b0;
+			enableI = 1'b0;
+			plot = 1'b0;
+
+        case (current_state)
+         BEGIN_state: begin
+         end
+			RESET_state:begin
+			resetn = 1'b1;
+			end
+			DRAW_BACKGROUND: begin
+			drawB = 1'b1;
+			plot =1'b1;
+			enableX = 1'b0;
+			end
+			PRINT_SCREEN:begin
+			enableX = 1'b1;
+			end
+			WAIT_FOR_COMPLETE: begin
+			drawB = 1'b0;
+			plot = 1'b0;
+			end
+			INCREMENT_BACKG: begin
+			enableI = 1'b1;
+			end
+        // default:    // don't need default since we already made sure all of our outputs were assigned a value at the start of the always block
+        endcase
+    end // enable_signals
+   
+    // current_state registers
+    always@(posedge CLOCK_50)
+    begin: state_FFs
+            current_state <= next_state;
+    end // state_FFS
+endmodule
