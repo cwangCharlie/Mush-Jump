@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at project.v(272): object "score" differs only in case from object "SCORE" in the same scope File: C:/Charlie w/Uni/unig2/ECE241 diginal systems/ece241project/241 project/project.v Line: 272
+Info (10281): Verilog HDL Declaration information at project.v(945): object "jump" differs only in case from object "JUMP" in the same scope File: C:/Charlie w/Uni/unig2/ECE241 diginal systems/ece241project/241 project/project.v Line: 945

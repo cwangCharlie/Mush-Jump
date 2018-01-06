@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dW:/ece241project/241 project
+vcontrol
+Z1 !s110 1511190758
+!i10b 1
+!s100 ZTgjM5ff5bn4TW6XYRMHY0
+IQi^N;8;A?H87C78G3:CXU2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1511190752
+Z4 8toplevelY.v
+Z5 FtoplevelY.v
+L0 265
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1511190757.000000
+Z8 !s107 toplevelY.v|
+Z9 !s90 -reportprogress|300|toplevelY.v|
+!i113 1
+Z10 tCvgOpt 0
+vdatapath
+R1
+!i10b 1
+!s100 zJ4Sj_g<onlJcU?19YHkk2
+I1BR9dn3AiX0EZaeoBl44K3
+R2
+R0
+R3
+R4
+R5
+L0 94
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vdatapathN
+Z11 !s110 1511298014
+!i10b 1
+!s100 6Y?6NLXhm;EJdM@F5DFH<2
+IWbUm8lDhZKh:ZjeGDcKQm3
+R2
+R0
+Z12 w1511152976
+Z13 8datapathN.v
+Z14 FdatapathN.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z15 !s108 1511298014.000000
+Z16 !s107 datapathN.v|
+Z17 !s90 -reportprogress|300|datapathN.v|
+!i113 1
+R10
+ndatapath@n
+vram
+R11
+!i10b 1
+!s100 n=3W<32M07]mcHgZVD]WE3
+InNlYUmLI^YJc>7e9NG9MZ1
+R2
+R0
+w1511106058
+8ram.v
+Fram.v
+Z18 L0 40
+R6
+r1
+!s85 0
+31
+R15
+!s107 ram.v|
+!s90 -reportprogress|300|ram.v|
+!i113 1
+R10
+vram_p
+R11
+!i10b 1
+!s100 ]P1?8Ro_8j]XQGQHjW^MD0
+IM:XbzGX?j:l9hNg27XlWV2
+R2
+R0
+w1511106059
+8ram_p.v
+Fram_p.v
+R18
+R6
+r1
+!s85 0
+31
+R15
+!s107 ram_p.v|
+!s90 -reportprogress|300|ram_p.v|
+!i113 1
+R10
+vrateDivider
+R1
+!i10b 1
+!s100 Q9fL`TWOHQbP@9m4DFOQO3
+Ikk3k6YF?Eil]LTeL724?63
+R2
+R0
+R3
+R4
+R5
+L0 417
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+nrate@divider
+vselectColour
+R11
+!i10b 1
+!s100 z6nmfgAH^G^RDlf7UQkXz0
+IEmdGWzXT5?7NGJV9<RfC^0
+R2
+R0
+R12
+R13
+R14
+L0 150
+R6
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 1
+R10
+nselect@colour
+vtoplevel
+!s110 1511137783
+!i10b 1
+!s100 VS5@GMd4A:71JIoCQm`1l0
+IL<zL51h[Hf;_VfC5R@djh0
+R2
+R0
+w1511136961
+R4
+R5
+L0 1
+OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1511137783.000000
+R8
+R9
+!i113 1
+vtoplevelY
+!s110 1511190757
+!i10b 1
+!s100 n=hhU^m5jGhRU=W;=>EhT0
+IWk=L3BkdDagn@<CEi<DkM1
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+ntoplevel@y
